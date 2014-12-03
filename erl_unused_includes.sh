@@ -67,6 +67,8 @@ if [ -n "$file" ]; then
             *pmod_transform/include/pmod.hrl*) continue;;
             # removing qlc.hrl might only cause a warning: treat as error
             *stdlib/include/qlc.hrl*) extra="-Werror ${extra}";;
+            # don't remove ms_transform.hrl
+            *stdlib/include/ms_transform.hrl*) continue;;
             *) ;;
         esac
         # comment out the include line
